@@ -3,10 +3,14 @@ h6 {
 }
 
 .selected {
-    border: 2px solid red;
+    border: 2px solid #ee2624;
 }
 
 img:hover:not(.aspect-square) {
-    border: 2px solid red;
+    border: 2px solid #ee2624;
 }
 
+.bg-red-500 {
+    background-color: #ee2624;
+    border: 1px solid #ee2624;
+}

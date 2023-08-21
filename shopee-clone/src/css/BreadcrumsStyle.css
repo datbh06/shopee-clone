@@ -1,0 +1,28 @@
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    position: relative;
+}
+
+.breadcrumb li + li:before {
+    content: '/';
+    padding: 0 5px;
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+
+.breadcrumb a {
+    color: #0f1e29;
+    text-decoration: none;
+    font-size: smaller;
+}
+
+.breadcrumb a:hover {
+
+}
