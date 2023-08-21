@@ -1,0 +1,12 @@
+h6 {
+    color: #ee2624;
+}
+
+.selected {
+    border: 2px solid red;
+}
+
+img:hover:not(.aspect-square) {
+    border: 2px solid red;
+}
+
