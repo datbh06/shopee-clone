@@ -17,7 +17,7 @@ const ProductDetailComponent = () => {
     const selectedIndex = Object.values(images).indexOf(activeImg) + 1;
     const totalImages = Object.keys(images).length;
 
-    return (<div className='bg-white flex flex-col lg:flex-row gap-16 lg p-4 rounded-xl'>
+    return (<div className='bg-white flex flex-col lg:flex-row gap-16 p-4 rounded-xl'>
         {/*PRODUCT IMAGES*/}
         <div className='flex flex-col gap-6 lg:w-1.25/3'>
             <div className='relative'> {/* add the relative class here */}
@@ -95,24 +95,44 @@ const ProductDetailComponent = () => {
             <div className='flex flex-row items-center gap-12'>
                 <p className="text-gray-600 text-sm" style={{fontSize: '14px'}}>Chọn số lượng:</p>
                 <div className='flex flex-row items-center'>
-                    <button className='bg-gray-200 py-1 px-3 mx-2 rounded-lg text-gray-800 text-2xl'
-                            onClick={() => setAmount((prev) => prev > 1 ? prev - 1 : prev)}>-
+                    <button
+                        className={`bg-gray-200 py-2 px-2 mx-2 rounded-b rounded-t text-gray-800 text-2xl ${amount === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        onClick={() => setAmount((prev) => prev > 1 ? prev - 1 : prev)}>
+                        <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                             xmlnsXlink="http://www.w3.org/1999/xlink" className="d7ed-SwZDZ2 d7ed-w34diS">
+                            <path fill="#6F787E" fillRule="nonzero" d="M22 11v2H2v-2z"></path>
+                        </svg>
                     </button>
-                    <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)}
-                           className='border py-1 px-2 mx-2 rounded-lg'/>
-                    <button className='bg-gray-200 py-1 px-3 mx-2 rounded-lg text-gray-800 text-2xl'
-                            onClick={() => setAmount((prev) => prev < 100 ? prev + 1 : prev)}>+
+                    <input type="number" value={amount} onChange={(e) => {
+                        const value = parseInt(e.target.value);
+                        if (value >= 1 && value <= 100) {
+                            setAmount(value);
+                        } else if (e.target.value === '') {
+                            setAmount(1);
+                        }
+                    }}
+                           className='border mx-0.5 rounded-b rounded-t text-center focus:outline-none focus:ring-2 focus:ring-blue-500'
+                           style={{width: '40px', height: '31.5px', appearance: 'none', color: '#3f4b53'}} min="1"
+                           max="100"/>
+
+                    <button
+                        className={`bg-gray-200 py-2 px-2 mx-2 rounded-b rounded-t text-gray-800 text-2xl ${amount === 100 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        onClick={() => setAmount((prev) => prev < 100 ? prev + 1 : prev)}>
+                        <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                             xmlnsXlink="http://www.w3.org/1999/xlink" className="d7ed-SwZDZ2 d7ed-w34diS">
+                            <path fill="#6F787E" fillRule="nonzero" d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
 
             {/*ADD TO CART & BUY BUTTONS*/}
-            <div className='flex flex-row items-center gap-5'>
+            <div className='flex flex-row items-center gap-2'>
                 <button className='bg-gray-200 text-gray-600
-                font-semibold py-2 px-20 rounded-b rounded-t h-full w-1/2'>Thêm vào giỏ
+                font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'>Thêm vào giỏ
                 </button>
                 <button
-                    className='bg-red-500 text-white font-semibold py-2 px-20 rounded-b rounded-t h-full w-1/2'>Mua
+                    className='bg-red-500 text-white font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'>Mua
                     ngay
                 </button>
             </div>

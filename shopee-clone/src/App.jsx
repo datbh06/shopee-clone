@@ -12,6 +12,7 @@ const App = () => {
             <TopNavbarComponent/>
             <NavBarComponent/>
         </div>
+
         <div className="max-w-7xl mx-auto pt-3 pb-0 px-8">
             <BreadcrumbsComponent items={items}/>
         </div>
