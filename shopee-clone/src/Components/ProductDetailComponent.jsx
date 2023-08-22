@@ -1,8 +1,9 @@
 import {useState} from 'react'
 import '../css/ProductDetailSectionStyle.css'
+import ModalSigninComponent from "./ModalSigninComponent.jsx";
 
 const ProductDetailComponent = () => {
-
+    const [showModal, setShowModal] = useState(false);
     const [images] = useState({
         img1: "https://media3.scdn.vn/img4/2022/05_31/I1qbSQQnpTMmWOTG68Rq_simg_de2fe0_500x500_maxb.png",
         img2: "https://media3.scdn.vn/img4/2022/05_31/S1Cn4ujZCtvrlIWpaIpe_simg_de2fe0_500x500_maxb.png",
@@ -132,9 +133,10 @@ const ProductDetailComponent = () => {
                 font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'>Thêm vào giỏ
                 </button>
                 <button
-                    className='bg-red-500 text-white font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'>Mua
-                    ngay
+                    className='bg-red-500 text-white font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'
+                    onClick={() => setShowModal(true)}>Mua ngay
                 </button>
+                <ModalSigninComponent showModal={showModal} setShowModal={setShowModal}/>
             </div>
 
             {/*VOUCHERS*/}
