@@ -69,15 +69,17 @@ const ProductDetailComponent = () => {
         <div className='flex flex-col gap-4 lg:w-2/4 text-left'>
             {/*TITLE & PRICE*/}
             <div className='mb-12'>
-                <div className='flex items-start'>
+                <div className='flex items-start '>
+
                     <div className='bg-red-600 text-white rounded-sm mr-2 text-sm top-0'
                          style={{letterSpacing: '0.1em'}}>Mall
                     </div>
                     <h2 className='text-xl font-bold mb-3'>Nồi áp suất Elmich PCE-1802 (5L) - 4021802</h2>
+
                 </div>
 
                 <p className="text-sm mb-2">Thương hiệu: <a href="/" className="text-blue-600">Elmich</a></p>
-                <h6 className='text-red-500 font-bold text-2xl'>2.250.000đ</h6>
+                <h6 className='text-[#ee2624] font-bold text-2xl'>2.250.000đ</h6>
             </div>
 
             {/*NUMBER OF SOLD*/}
@@ -130,10 +132,10 @@ const ProductDetailComponent = () => {
             {/*ADD TO CART & BUY BUTTONS*/}
             <div className='flex flex-row items-center gap-2'>
                 <button className='bg-gray-200 text-gray-600
-                font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'>Thêm vào giỏ
+                font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2 hover:bg-[#f2f3f4]'>Thêm vào giỏ
                 </button>
                 <button
-                    className='bg-red-500 text-white font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2'
+                    className='bg-[#ee2624] text-white font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2 hover:bg-[#f1514f]'
                     onClick={() => setShowModal(true)}>Mua ngay
                 </button>
                 <ModalSigninComponent showModal={showModal} setShowModal={setShowModal}/>
@@ -143,7 +145,7 @@ const ProductDetailComponent = () => {
             <div className='flex flex-col gap-4 mt-8'>
                 <hr/>
                 <div className='flex items-center gap-2 justify-between'>
-                    <h3>Ưu đãi dành cho bạn</h3>
+                    <h3 className='text-md font-semibold'>Ưu đãi dành cho bạn</h3>
                     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"
                          xmlnsXlink="http://www.w3.org/1999/xlink" className="icon i-icon">
                         <path
@@ -160,7 +162,7 @@ const ProductDetailComponent = () => {
                 {/*BENEFITS & INSURANCE*/}
                 <hr/>
                 <div className='flex items-center gap-2 justify-between'>
-                    <h3>Quyền lợi khách hàng & Bảo hành</h3>
+                    <h3 className='text-md font-semibold'>Quyền lợi khách hàng & Bảo hành</h3>
 
                     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"
                          xmlnsXlink="http://www.w3.org/1999/xlink" className="icon i-icon">
