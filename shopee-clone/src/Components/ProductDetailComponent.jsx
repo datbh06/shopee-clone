@@ -29,7 +29,6 @@ function ProductDetailComponent({setCartCount}) {
         <div className='flex flex-col gap-6 lg:w-1.25/3'>
             <div className='relative'> {/* add the relative class here */}
                 {/*ACTIVE IMAGE*/}
-
                 <img src={activeImg} alt="" className='w-full h-full aspect-square object-cover rounded-xl'/>
 
                 <div
@@ -59,6 +58,7 @@ function ProductDetailComponent({setCartCount}) {
             </div>
             {/*SMALLER SLIDING IMAGES*/}
             <div className='flex flex-row justify-start h-24 gap-2'>
+
                 <img src={images.img1} alt=""
                      className={`w-16 h-16 rounded-md cursor-pointer ${activeImg === images.img1 ? 'selected' : ''}`}
                      onClick={() => setActiveImage(images.img1)}/>

@@ -5,6 +5,7 @@ import NavBarComponent from "./Components/NavBarComponent.jsx";
 import TopNavbarComponent from "./Components/TopNavbarComponent.jsx";
 import RetailInfoComponent from "./Components/RetailInfoComponent.jsx";
 import {useState} from "react";
+import DescriptionComponent from "./Components/DescriptionComponent.jsx";
 
 const App = () => {
     const items = ['Sendo.vn', 'Đồ điện gia dụng', 'Nồi điện, nồi cơm điện', 'Nồi áp suất điện'];
@@ -20,7 +21,11 @@ const App = () => {
         </div>
         <div className="max-w-7xl mx-auto p-8">
             <ProductDetailComponent setCartCount={setCartCount}/>
-            <RetailInfoComponent/>
+            <div className="flex lg:flex-row gap-6 rounded-xl">
+                <RetailInfoComponent style={{flex: 1}}/>
+                <DescriptionComponent style={{flex: 5}}/>
+            </div>
+
         </div>
 
     </div>)

@@ -69,7 +69,7 @@ const RetailInfoComponent = () => {
             <hr/>
             <p className='text-sm font-semibold mt-3 mb-4'>Gợi ý thêm từ Shop</p>
             <div style={{
-                background: 'linear-gradient(to bottom, white, pink)', borderRadius: '10px', paddingBottom : '10px',
+                background: 'linear-gradient(to bottom, white, pink)', borderRadius: '10px', padding: '10px',
             }}>
                 <CarouselComponent/>
             </div>
