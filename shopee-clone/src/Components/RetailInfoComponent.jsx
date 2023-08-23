@@ -1,3 +1,5 @@
+import CarouselComponent from "./CarouselComponent.jsx";
+
 const RetailInfoComponent = () => {
     return (<div
         className={`inline-block align-bottom bg-white rounded-lg p-6
@@ -65,7 +67,12 @@ const RetailInfoComponent = () => {
 
         <div>
             <hr/>
-            <p className='text-sm font-semibold mt-3'>Gợi ý thêm từ Shop</p>
+            <p className='text-sm font-semibold mt-3 mb-4'>Gợi ý thêm từ Shop</p>
+            <div style={{
+                background: 'linear-gradient(to bottom, white, pink)', borderRadius: '10px', paddingBottom : '10px',
+            }}>
+                <CarouselComponent/>
+            </div>
         </div>
     </div>);
 };

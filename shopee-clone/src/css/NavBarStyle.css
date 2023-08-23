@@ -1,0 +1,19 @@
+.icon-cart {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ee2624;
+    background-color: white;
+    color: #ee2624;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}

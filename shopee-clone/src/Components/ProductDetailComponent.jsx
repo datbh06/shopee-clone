@@ -2,17 +2,23 @@ import {useState} from 'react'
 import '../css/ProductDetailSectionStyle.css'
 import ModalSigninComponent from "./ModalSigninComponent.jsx";
 
-const ProductDetailComponent = () => {
-    const [showModal, setShowModal] = useState(false);
+function ProductDetailComponent({setCartCount}) {
+
     const [images] = useState({
         img1: "https://media3.scdn.vn/img4/2022/05_31/I1qbSQQnpTMmWOTG68Rq_simg_de2fe0_500x500_maxb.png",
         img2: "https://media3.scdn.vn/img4/2022/05_31/S1Cn4ujZCtvrlIWpaIpe_simg_de2fe0_500x500_maxb.png",
         img3: "https://media3.scdn.vn/img4/2022/05_31/o0rEFXiGJxZ2bXMdrC2u_simg_de2fe0_500x500_maxb.png"
     })
 
-    const [activeImg, setActiveImage] = useState(images.img1)
+    const [activeImg, setActiveImage] = useState(images.img1);
 
     const [amount, setAmount] = useState(1);
+
+    const [showModal, setShowModal] = useState(false);
+
+    const handleAddToCart = () => {
+        setCartCount((amount));
+    };
 
     // determine the index of the selected image
     const selectedIndex = Object.values(images).indexOf(activeImg) + 1;
@@ -23,7 +29,9 @@ const ProductDetailComponent = () => {
         <div className='flex flex-col gap-6 lg:w-1.25/3'>
             <div className='relative'> {/* add the relative class here */}
                 {/*ACTIVE IMAGE*/}
+
                 <img src={activeImg} alt="" className='w-full h-full aspect-square object-cover rounded-xl'/>
+
                 <div
                     className='absolute bottom-0 left-0 bg-gray-200 rounded-xl px-1 py-1 w-12 h-6 text-sm flex justify-center items-center'>
                     {selectedIndex}/{totalImages}
@@ -48,7 +56,6 @@ const ProductDetailComponent = () => {
                         </svg>
                     </button>
                 </div>
-
             </div>
             {/*SMALLER SLIDING IMAGES*/}
             <div className='flex flex-row justify-start h-24 gap-2'>
@@ -63,7 +70,6 @@ const ProductDetailComponent = () => {
                      onClick={() => setActiveImage(images.img3)}/>
             </div>
         </div>
-
 
         {/* PRODUCT DETAILS */}
         <div className='flex flex-col gap-4 lg:w-2/4 text-left'>
@@ -132,7 +138,8 @@ const ProductDetailComponent = () => {
             {/*ADD TO CART & BUY BUTTONS*/}
             <div className='flex flex-row items-center gap-2'>
                 <button className='bg-gray-200 text-gray-600
-                font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2 hover:bg-[#f2f3f4]'>Thêm vào giỏ
+                font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2 hover:bg-[#f2f3f4]'
+                        onClick={handleAddToCart}>Thêm vào giỏ
                 </button>
                 <button
                     className='bg-[#ee2624] text-white font-semibold py-3 px-25 rounded-b rounded-t h-full w-1/2 hover:bg-[#f1514f]'

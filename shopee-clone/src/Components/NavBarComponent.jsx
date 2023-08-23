@@ -1,8 +1,10 @@
 import {useState} from "react";
 import ModalSigninComponent from "./ModalSigninComponent.jsx";
+import '../css/NavBarStyle.css'
 
-export default function NavBarComponent() {
+function NavBarComponent({cartCount}) {
     const [showModal, setShowModal] = useState(false);
+
 
     return (<div className="bg-[#222f3e] w-full">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -37,7 +39,7 @@ export default function NavBarComponent() {
                                 className=" bg-white py-1.5 px-1.5 border border-gray-300 rounded-b rounded-t ml-1">
                             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                  version="1.1"
-                                 xmlnsXlink="http://www.w3.org/1999/xlink" className="d7ed-SwZDZ2 d7ed-w34diS">
+                                 xmlnsXlink="http://www.w3.org/1999/xlink">
                                 <path
                                     d="M10 2a8 8 0 0 1 6.32 12.905l5.387 5.388-1.414 1.414-5.388-5.386A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"
                                     fill="#6F787E" fillRule="nonzero"></path>
@@ -60,6 +62,7 @@ export default function NavBarComponent() {
                                 d="m20.946 2 .994 17.89a2 2 0 0 1-1.886 2.107l-.111.003H4.057a2 2 0 0 1-2-2c0-.055 0-.055.003-.11L3.054 2h17.892Zm-1.892 2H4.946l-.889 16h15.886l-.889-16ZM9 6v2.5c0 1.248 1.385 2.5 3 2.5s3-1.252 3-2.5V6h2v2.5c0 2.4-2.323 4.5-5 4.5s-5-2.1-5-4.5V6h2Z"
                                 fill="#FFFFFF" fillRule="nonzero"></path>
                         </svg>
+                        {cartCount > 0 && (<span className="badge">{cartCount}</span>)}
                     </button>
                     <button
                         type="button" className="relative bg-white text-[#3f4b53] py-1.5 px-3
@@ -73,3 +76,5 @@ export default function NavBarComponent() {
         </div>
     </div>)
 }
+
+export default NavBarComponent;
