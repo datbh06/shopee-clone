@@ -11,7 +11,7 @@ import 'swiper/css';
 const CarouselComponent = () => {
     const data = {
         imgSrc: "https://media3.scdn.vn/img4/2022/10_24/F03SLQl1r703cohEitFY.png",
-        title: "Nồi cơm áp suất đa năng Elmich...",
+        title: "Nồi cơm áp suất đa năng Elmich PCE-1806 (5L)",
         oldPrice: "2.690.000đ",
         discount: "-31%",
         newPrice: "1.868.000đ"

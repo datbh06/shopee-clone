@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import '../css/ProductDetailSectionStyle.css'
-import ModalSigninComponent from "./ModalSigninComponent.jsx";
+import '../../css/ProductDetailSectionStyle.css'
+import ModalSigninComponent from "../GeneralComponents/ModalSigninComponent.jsx";
 
 function ProductDetailComponent({setCartCount}) {
 
@@ -36,7 +36,8 @@ function ProductDetailComponent({setCartCount}) {
                     {selectedIndex}/{totalImages}
                 </div>
                 <div className='absolute bottom-0 right-0 flex items-center'>
-                    <button className='bg-gray-200 w-8 h-8 flex justify-center items-center mr-2 rounded-sm'>
+                    <button
+                        className='bg-gray-200 w-8 h-8 flex justify-center items-center mr-2 rounded-sm hover:bg-[#f2f3f4] hover:border-[#f2f3f4]'>
                         <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                              version="1.1"
                              xmlnsXlink="http://www.w3.org/1999/xlink" className="icon share">
@@ -45,7 +46,8 @@ function ProductDetailComponent({setCartCount}) {
                                 fill="#6F787E" fillRule="nonzero"></path>
                         </svg>
                     </button>
-                    <button className='bg-gray-200  w-8 h-8 flex justify-center items-center rounded-sm'>
+                    <button
+                        className='bg-gray-200  w-8 h-8 flex justify-center items-center rounded-sm hover:bg-[#f2f3f4] hover:border-[#f2f3f4]'>
                         <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                              version="1.1"
                              xmlnsXlink="http://www.w3.org/1999/xlink" className="icon favorite">

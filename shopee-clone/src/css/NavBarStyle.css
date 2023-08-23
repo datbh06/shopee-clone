@@ -17,3 +17,10 @@
     align-items: center;
     font-size: 12px;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}

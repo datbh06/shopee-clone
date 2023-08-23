@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import '../css/BreadcrumsStyle.css'
+import '../../css/BreadcrumsStyle.css'
 
 const BreadcrumbsComponent = ({items}) => (<nav aria-label="breadcrumb">
     <ol className="breadcrumb">

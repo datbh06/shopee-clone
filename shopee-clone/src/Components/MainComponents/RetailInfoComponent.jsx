@@ -1,4 +1,4 @@
-import CarouselComponent from "./CarouselComponent.jsx";
+import CarouselComponent from "../GeneralComponents/CarouselComponent.jsx";
 
 const RetailInfoComponent = () => {
     return (<div
@@ -34,7 +34,7 @@ const RetailInfoComponent = () => {
         </div>
         <div className="grid mb-4 " style={{gridTemplateColumns: '45fr 45fr 10fr', gap: "5px"}}>
             <button
-                className="h-10 bg-[#e7e8ea] text-[#3f4b53] text-sm font-semibold rounded-b rounded-t flex items-center justify-center">
+                className="h-10 bg-[#e7e8ea] text-[#3f4b53] text-sm font-semibold rounded-b rounded-t flex items-center justify-center hover:bg-[#f2f3f4] hover:border-[#f2f3f4]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" version="1.1"
                      xmlnsXlink="http://www.w3.org/1999/xlink" className="mr-2">
                     <path
@@ -44,7 +44,7 @@ const RetailInfoComponent = () => {
                 Theo dõi shop
             </button>
             <button
-                className="bg-[#e7e8ea] text-[#3f4b53] text-sm font-semibold rounded-b rounded-t  flex items-center justify-center">
+                className="bg-[#e7e8ea] text-[#3f4b53] text-sm font-semibold rounded-b rounded-t  flex items-center justify-center hover:bg-[#f2f3f4] hover:border-[#f2f3f4]">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"
                      xmlnsXlink="http://www.w3.org/1999/xlink" className="mr-2" style={{color: "rgb(63, 75, 83)"}}>
                     <path
@@ -54,7 +54,7 @@ const RetailInfoComponent = () => {
                 Vào Shop
             </button>
             <button
-                className="bg-[#e7e8ea] text-[#3f4b53] text-sm font-semibold rounded-b rounded-t flex justify-center items-center">
+                className="bg-[#e7e8ea] font-semibold rounded-b rounded-t flex justify-center items-center hover:bg-[#f2f3f4] hover:border-[#f2f3f4]">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"
                      xmlnsXlink="http://www.w3.org/1999/xlink" className="mr-2">
                     <path

@@ -1,11 +1,10 @@
 import {useState} from "react";
-import '../css/CollapseStyle.css'
-
+import '../../css/CollapseStyle.css'
 
 const DescriptionComponent = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
 
-    return (<div className={`bg-white rounded-lg p-6 text-left shadow-xl sm:my-8 sm:w-full`}>
+    return (<div className={`bg-white rounded-lg p-6 text-left shadow-xl sm:my-8 sm:w-full sm:h-fit`}>
         <p className='text-md font-semibold mb-3'>Mô tả sản phẩm</p>
 
         <p className='text-sm text-[#0f1e29] leading-tight font-normal mb-3'>Giới thiệu sản phẩm Đặc điểm nổi bật:- Dễ
@@ -17,8 +16,7 @@ const DescriptionComponent = () => {
 
         <p className='text-sm font-semibold mb-2'>Thông tin cơ bản</p>
 
-
-        <table className="min-w-full">
+        <table className="min-w-full relative">
             <tbody>
             <tr className="bg-gray-100">
                 <td className="text-sm text-[#6f787e] font-normal px-6 py-4 whitespace-nowrap rounded-tl-lg">Dung
@@ -42,6 +40,16 @@ const DescriptionComponent = () => {
                 <td className="text-sm text-[#6f787e] font-normal  px-6 py-4 whitespace-nowrap"></td>
                 <td className="text-sm text-[#6f787e] font-normal  px-6 py-4 whitespace-nowrap"></td>
             </tr>
+
+            {isCollapsed && (<div style={{
+                background: "linear-gradient(180deg,hsla(0,0%,100%,0),#fff)",
+                width: "100%",
+                height: "12rem",
+                position: "absolute",
+                bottom: "0",
+                left: "0"
+            }}></div>)}
+
             {!isCollapsed && (<tr className="bg-white">
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-[#6f787e] font-normal ">Kiểu nồi</td>
                 <td className="text-sm text-[#6f787e] font-normal  px-6 py-4 whitespace-nowrap">Nồi thông thường
@@ -89,25 +97,19 @@ const DescriptionComponent = () => {
             Elmich tiếp tục thực hiện mục tiêu khẳng định, duy trì vị thế dẫn đầu ngành hàng đồ gia dụng phân khúc
             trung
             và cao cấp. Qua đó, khơi dậy đam mê và truyền cảm hứng nấu nướng trong mỗi gian bếp hiện đại.
-
         </div>)}
 
-        {
-            isCollapsed && (<button
-                    className="mt-6 bg-[#e7e8ea] border-1 border-[#e7e8ea] hover:bg-[#f2f3f4] hover:border-[#f2f3f4] text-[#3f4b53] text-xs font-bold py-3 px-4 w-full rounded"
-                    onClick={() => setIsCollapsed(false)}>
-                    Xem thêm
-                </button>
-            )
-        }
+        {isCollapsed && (<button
+            className="mt-6 bg-[#e7e8ea] border-1 border-[#e7e8ea] hover:bg-[#f2f3f4] hover:border-[#f2f3f4] text-[#3f4b53] text-xs font-bold py-3 px-4 w-full rounded"
+            onClick={() => setIsCollapsed(false)}>
+            Xem thêm
+        </button>)}
 
-        {
-            !isCollapsed && (<button
-                className="mt-6 bg-[#e7e8ea] border-1 border-[#e7e8ea] hover:bg-[#f2f3f4] hover:border-[#f2f3f4] text-[#3f4b53] text-xs font-bold py-3 px-4 w-full rounded"
-                onClick={() => setIsCollapsed(true)}>
-                Thu gọn
-            </button>)
-        }
+        {!isCollapsed && (<button
+            className="mt-6 bg-[#e7e8ea] border-1 border-[#e7e8ea] hover:bg-[#f2f3f4] hover:border-[#f2f3f4] text-[#3f4b53] text-xs font-bold py-3 px-4 w-full rounded"
+            onClick={() => setIsCollapsed(true)}>
+            Thu gọn
+        </button>)}
     </div>)
 };
 
