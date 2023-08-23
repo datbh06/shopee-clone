@@ -3,7 +3,7 @@ import CarouselComponent from "./CarouselComponent.jsx";
 const RetailInfoComponent = () => {
     return (<div
         className={`inline-block align-bottom bg-white rounded-lg p-6
-                    text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full relative`}>
+                    text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full max-h-max`}>
         <p className='text-md font-semibold'>Thông tin nhà cung cấp</p>
         <div className={"flex"}>
             <img src="https://media3.scdn.vn/img4/2022/09_27/nqrquod949Ya6lzfHNQX.png" alt="shop-avatar"

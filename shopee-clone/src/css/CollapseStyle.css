@@ -1,0 +1,10 @@
+.blur {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}

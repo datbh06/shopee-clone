@@ -22,10 +22,11 @@ const App = () => {
         <div className="max-w-7xl mx-auto p-8">
             <ProductDetailComponent setCartCount={setCartCount}/>
             <div className="flex lg:flex-row gap-6 rounded-xl">
-                <RetailInfoComponent style={{flex: 1}}/>
+                <div style={{height: '800px', width: '600px'}}>
+                    <RetailInfoComponent style={{flex: 1}}/>
+                </div>
                 <DescriptionComponent style={{flex: 5}}/>
             </div>
-
         </div>
 
     </div>)
