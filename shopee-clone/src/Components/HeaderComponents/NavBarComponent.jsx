@@ -38,12 +38,11 @@ function NavBarComponent({cartCount}) {
                                 fill="#FFFFFF" fillRule="nonzero"></path>
                         </svg>
                     </div>
-
-
+                    
                     {/*SEARCH BAR*/}
                     <div className="flex flex-grow justify-center items-center">
                         <input type="text"
-                               className="border border-gray-300 rounded-b rounded-t py-2 px-5 pr-12 w-full text-sm tracking-tighter"
+                               className="border border-gray-300 outline-none rounded-b rounded-t py-2 px-5 pr-12 w-full text-sm tracking-tighter"
                                placeholder="Tìm  trên Sendo"/>
                         <button type="submit"
                                 className=" bg-white py-1.5 px-1.5 border border-gray-300 rounded-b rounded-t ml-1">

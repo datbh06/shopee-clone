@@ -6,10 +6,10 @@ function ModalSigninComponent({showModal, setShowModal}) {
     }
     const [inputValue, setInputValue] = useState('');
 
-    return (<div className={`fixed z-10 inset-0 overflow-y-auto`} aria-labelledby={`modal-title`}
+    return (<div className={`fixed z-10 inset-0 overflow-y-auto pt-4`} aria-labelledby={`modal-title`}
                  role={`dialog`} aria-modal={`true`}>
         <div
-            className={`flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0`}>
+            className={`flex items-end justify-center min-h-screen p-4 px-4 pb-20 text-center sm:block sm:p-0`}>
             <div className={`fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity`}
                  aria-hidden={`true`}/>
             {/* This element is to trick the browser into centering the modal contents. */}
@@ -65,7 +65,6 @@ function ModalSigninComponent({showModal, setShowModal}) {
                         <p className="text-xs text-[#6f787e]">Hoặc thông qua:</p>
                         <div>
                             <image src="../public/google.png" alt="google" className="w-10 h-10 bg-white "/>
-
                         </div>
 
                     </div>
