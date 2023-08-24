@@ -6,3 +6,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+li {
+    margin-bottom: 10px;
+}

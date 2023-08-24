@@ -9,6 +9,9 @@ import DescriptionComponent from "./Components/MainComponents/DescriptionCompone
 import ReviewComponent from "./Components/MainComponents/ReviewComponent.jsx";
 import QuestioningComponent from "./Components/MainComponents/QuestioningComponent.jsx";
 import RelatedProductsComponents from "./Components/MainComponents/RelatedProductsComponents.jsx";
+import SloganComponent from "./Components/FooterComponents/SloganComponent.jsx";
+import ResourcesComponent from "./Components/FooterComponents/ResourcesComponent.jsx";
+import SendoFooterComponent from "./Components/FooterComponents/SendoFooterComponent.jsx";
 
 const App = () => {
     const items = ['Sendo.vn', 'Đồ điện gia dụng', 'Nồi điện, nồi cơm điện', 'Nồi áp suất điện'];
@@ -41,6 +44,9 @@ const App = () => {
             </div>
         </main>
         <footer>
+            <SloganComponent/>
+            <ResourcesComponent/>
+            <SendoFooterComponent/>
         </footer>
     </div>)
 }
